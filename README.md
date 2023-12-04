@@ -13,3 +13,5 @@ The questions in the weather_db_script were answered using different methods lik
 We also connected R to MySQL to explore the weather database as seen in the MySQL_Connector_R_Prog.R and MySQL_Connector_R_Prog.pdf file.
 
 Similarly, python was connected to MySQL as seen in the MySQL_Connector_Python.ipynb.
+
+Database source: https://github.com/profusion-public/Data-Academy-SQL 
