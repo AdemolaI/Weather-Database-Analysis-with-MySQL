@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mysql_db:
+    image: mysql:5.7.31
+    container_name: da_sql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+     - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: userpass
+      MYSQL_DATABASE: weather_db
+    volumes:
+     - ./database/db_dumps:/docker-entrypoint-initdb.d
+     - data-volume:/var/lib/mysql
+
+volumes:
+  data-volume:
